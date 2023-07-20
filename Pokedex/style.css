@@ -1,0 +1,127 @@
+
+
+body {
+    background-color: #bfbfbf;
+}
+
+header {
+    margin: 1rem;
+    width: 94%;
+    margin: 1rem auto;
+    background-color: rgba(112, 112, 112, 0.278);
+    border: 0px rgb(255, 255, 255) solid;
+    border-radius: 15px 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.navbar {
+
+}
+
+.navbar_Link {
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: inherit;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-card {
+    width: 15%;
+    position: relative;
+    height: 20rem;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.front:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.back:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.front,
+.back {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1.2s;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.front {
+    border: 2px black solid;
+    border-radius: 20px 20px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: rgb(172, 170, 170);
+    border: 2px rgb(255, 255, 255) solid;
+    border-radius: 15px 15px;
+}
+
+.pokemon-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.pokemon-card.flipped .back {
+    transform: rotateY(0);
+}
+
+div {
+    color: white;
+    text-align: center;
+}
+
+
+h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+img {
+    height: 13rem;
+    margin-bottom: 0.2rem;
+}
+
+.abilities_title{
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+.abilities {
+    margin: 1rem;
+    font-size: 1.2rem;
+    color: black;
+    text-align: left;
+}
+
+* {
+    user-select: none;
+}
