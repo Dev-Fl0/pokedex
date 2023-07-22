@@ -4,15 +4,17 @@
 
     <% pokemons.forEach(pokemon => { %>
 
-        <div class="pokemon_div">
-            <h3 class="pokemon_title"><%= pokemon.name.fr %> #<%= pokemon.pokedexId %> </h3>
-            <img src="<%= pokemon.sprites.regular %>" alt="pokemon.name.fr" class="pokemon_img_front">
-            <div class="div_button">
-                <button class="shiny_button">Shiny</button>
-                <button class="info_button">Infos</button>
+        <div class="pokemon_card">
+            <div class="pokemon_div">
+                <h3 class="pokemon_title"><%= pokemon.name.fr %> #<%= pokemon.pokedexId %> </h3>
+                <img src="<%= pokemon.sprites.regular %>" alt="pokemon.name.fr" class="pokemon_img_front">
+                <div class="div_button">
+                    <button class="shiny_button">Shiny</button>
+                    <button class="info_button">Infos</button>
+                </div>
             </div>
         </div>
-     
+
     <% }) %>
 
 </main>
@@ -23,6 +25,6 @@
 
 <script>
     const pokemonsData = <%- JSON.stringify(pokemons) %>;
-  </script>
+</script>
 
 <%- include('partials/footer') %>
