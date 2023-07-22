@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<main class="main">
+
+    <% pokemons.forEach(pokemon => { %>
+
+        <div class="pokemon_div">
+            <h3 class="pokemon_title"><%= pokemon.name.fr %> #<%= pokemon.pokedexId %> </h3>
+            <img src="<%= pokemon.sprites.regular %>" alt="pokemon.name.fr" class="pokemon_img_front">
+            <div class="div_button">
+                <button class="shiny_button">Shiny</button>
+                <button class="info_button">Infos</button>
+            </div>
+        </div>
+     
+    <% }) %>
+
+</main>
+
+<div class="div_next">
+    <button class="button_next">21 à 40</button>
+</div>
+
+<script>
+    const pokemonsData = <%- JSON.stringify(pokemons) %>;
+  </script>
+
+<%- include('partials/footer') %>

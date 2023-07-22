@@ -1,0 +1,167 @@
+body {
+    background-color: darkred;
+}
+
+/* Header */
+
+header {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem 0rem;
+    border: 0px black solid;
+    border-radius: 15px 15px;
+    box-shadow: 0px 8px 10px inset;
+    background-color: brown;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 6em;
+    text-transform: capitalize;
+    color: black;
+}
+
+.link {
+    padding: 2rem;
+    font-size: 1.5em;
+    text-decoration: none;
+    
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Pokemon card */
+
+.pokemon_div {
+    position: relative; /* Ajout de la position relative pour pouvoir positionner l'élément d'information supplémentaire (.pokemon_info) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 0px white solid;
+    border-radius: 2rem 2rem;
+    width: 20%;
+    transition: transform 1.5s;
+    /* Ajout de la propriété "backface-visibility" pour éviter un effet indésirable pendant la transition */
+    backface-visibility: hidden;
+    /* Ajout d'une perspective pour donner de la profondeur à l'effet de retournement */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+.pokemon_div:hover {
+    box-shadow: 0px 8px 10px ;
+    background-color: brown;
+}
+
+/* Ajout des styles pour l'effet de retournement */
+.pokemon_div.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .pokemon_div.flipped .pokemon_info {
+    display: flex;
+  }
+  
+
+  /* Ajout des styles pour afficher le contenu correctement après le retournement */
+.pokemon_div.flipped .pokemon_img_front {
+    display: none;
+  }
+
+.pokemon_title {
+    justify-self: baseline;
+    margin-top: 1.5rem;
+    font-size: 2em;
+    color: white;
+}
+
+.pokemon_img_front, 
+.pokemon_img_back {
+    height: 15rem;
+    padding: 1rem;
+}
+
+
+.div_button {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+ 
+.shiny_button, .info_button {
+    all: initial;
+    padding: 0.2rem;
+    color: darkorchid;
+    border: 0px black solid;
+    border-radius: 30% 30%;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 8px;
+}
+
+.photo_button {
+    all: initial;
+    padding: 0.2rem;
+    color: darkorchid;
+    border: 0px black solid;
+    border-radius: 30% 30%;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 8px;
+}
+
+/* divNextElement */
+
+.div_next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.button_next{
+    
+}
+
+/* Styles pour l'élément d'information supplémentaire */
+.pokemon_info {
+    position: absolute;
+    top: -10;
+    left: 0;
+    height: 225%;
+    transform: rotateY(180deg);
+    border: 2px white solid;
+    border-radius: 2rem 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: brown;
+    color: black;
+  }
+
+  .pokemon_info:hover {
+    box-shadow: 0px 8px 10px;
+    background-color: brown;
+}
+
+  .pokemon_info ul li {
+    margin-bottom: 0.2rem;
+  }
+
+  .pokemon_info p {
+    margin-bottom: 0.1rem;
+  }
+
+  * {
+    user-select: none;
+  }
