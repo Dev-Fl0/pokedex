@@ -57,13 +57,13 @@ function startScript() {
     const types = pokemon.types.map((type) => type.name).join(", ");
     const talents = pokemon.talents.map((talent) => talent.name).join(", ");
 
-    infoDiv.innerHTML = `<p>Nom: ${pokemon.name.fr}</p>
-                        <p>Type: ${types}</p>
-                        <p>Talents: ${talents}</p>
-                        <p>Hauteur: ${pokemon.height}</p>
-                        <p>Poids: ${pokemon.weight}</p>
-                        <p>Stats:</p>
-                        <ul>
+    infoDiv.innerHTML = `<p class="stats">Nom: ${pokemon.name.fr}</p>
+                        <p class="stats">Type: ${types}</p>
+                        <p class="stats">Talents: ${talents}</p>
+                        <p class="stats">Hauteur: ${pokemon.height}</p>
+                        <p class="stats">Poids: ${pokemon.weight}</p>
+                        <p class="stats">Stats:</p>
+                        <ul class="stats">
                           <li>HP: ${pokemon.stats.hp}</li>
                           <li>Attaque: ${pokemon.stats.atk}</li>
                           <li>Défense: ${pokemon.stats.def}</li>
@@ -71,7 +71,7 @@ function startScript() {
                           <li>Défense Spéciale: ${pokemon.stats.spe_def}</li>
                           <li>Vitesse: ${pokemon.stats.vit}</li>
                         </ul>
-                        <div class="div_buttonBack">
+                        <div class="div_buttonBack stats">
                           <button class="photo_button">Retour</button>
                         </div>`;
 
